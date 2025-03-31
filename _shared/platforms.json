@@ -1,0 +1,18 @@
+{
+  "bsw-mcal-msp": {
+    "submodule_path": "platform/bsw-mcal-msp",
+    "description": "TI MSPM0 series (LP-MSPM0G, LP-MSPM0L)",
+    "toolchain": "arm-none-eabi",
+    "toolchain_version": "13.3.rel1",
+    "pyocd_pack": "TexasInstruments.MSPM0G_DFP",
+    "example_board": "lp_mspm0g3507"
+  },
+  "bsw-mcal-traveo": {
+    "submodule_path": "platform/bsw-mcal-traveo",
+    "description": "Infineon TRAVEO II series",
+    "toolchain": "arm-none-eabi",
+    "toolchain_version": "13.3.rel1",
+    "pyocd_pack": "Infineon.TVII-B-E-1M-Kit_DFP",
+    "example_board": "kit_t2g_b_e_1m"
+  }
+}

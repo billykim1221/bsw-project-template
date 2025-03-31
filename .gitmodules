@@ -1,0 +1,4 @@
+[submodule "bsw"]
+	path = bsw
+	url = https://github.com/Weldex-Corporation/bsw.git
+	branch = main

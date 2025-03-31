@@ -1,0 +1,39 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "bsw-mcal-msp",
+      "displayName": "TI MSPM0G (LP-MSPM0G3507)",
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi.cmake",
+      "binaryDir": "${sourceDir}/build/bsw-mcal-msp",
+      "cacheVariables": {
+        "BOARD":         "lp_mspm0g3507",
+        "BSW_PLATFORM":  "bsw-mcal-msp",
+        "PYOCD_TARGET":  "MSPM0G3507",
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "bsw-mcal-traveo",
+      "displayName": "Infineon TRAVEO II",
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi.cmake",
+      "binaryDir": "${sourceDir}/build/bsw-mcal-traveo",
+      "cacheVariables": {
+        "BOARD":         "kit_t2g_b_e_1m",
+        "BSW_PLATFORM":  "bsw-mcal-traveo",
+        "PYOCD_TARGET":  "CYT4BB7CEE",
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "bsw-mcal-msp",
+      "configurePreset": "bsw-mcal-msp"
+    },
+    {
+      "name": "bsw-mcal-traveo",
+      "configurePreset": "bsw-mcal-traveo"
+    }
+  ]
+}

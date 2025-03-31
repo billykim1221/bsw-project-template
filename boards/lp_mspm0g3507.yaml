@@ -1,0 +1,44 @@
+# LP-MSPM0G3507 LaunchPad EVM — Hello World (LED Blink) Template
+#
+# Pinout (LP-MSPM0G3507 schematic):
+#   PA0  — LED_GREEN  (GPIO output, active HIGH)
+#   PB22 — LED_BLUE   (GPIO output, active HIGH)
+#   PB26 — LED_RED    (GPIO output, active HIGH)
+#   PB21 — BTN_S2     (GPIO input, active LOW, internal pull-up)
+#   PA10 — UART0_TX
+#   PA11 — UART0_RX
+
+board: LP_MSPM0G3507
+chip:  MSPM0G3507
+
+port:
+  - pin:       PA0
+    name:      LED_GREEN
+    direction: OUTPUT
+    initial:   LOW
+    pull:      NONE
+  - pin:       PB22
+    name:      LED_BLUE
+    direction: OUTPUT
+    initial:   LOW
+    pull:      NONE
+  - pin:       PB26
+    name:      LED_RED
+    direction: OUTPUT
+    initial:   LOW
+    pull:      NONE
+  - pin:       PB21
+    name:      BTN_S2
+    direction: INPUT
+    pull:      UP
+
+uart:
+  - instance:  UART0
+    tx_pin:    PA10
+    rx_pin:    PA11
+    baudrate:  115200
+
+mcu:
+  tick_timer: TIMG0
+  cpu:        cortex-m0plus
+  clock_hz:   32000000

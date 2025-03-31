@@ -1,0 +1,10 @@
+build/
+_shared/tools/compilers/
+_shared/tools/sdk/
+*.elf
+*.bin
+*.hex
+*.map
+.vscode/
+.cache/
+CMakeUserPresets.json
